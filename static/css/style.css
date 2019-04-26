@@ -1,76 +1,168 @@
-{% extends 'base.html' %}
-{% block content %}
+body {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	background-color: #007bff;
+}
 
-<h2>View Recipe</h2>
-    <!--Displays number of recipes selected-->
-    <div class="list-display">
-        <div class="container">
-            <div class="navbar-header">
-                <form method="GET" action=
-            <!-- select by "Country of Origin" -->
-                    <div class="container">
-                      <div class="row">
-                        <ul id="navbar">
-                        <label for="CountryOrigin" class="field"></label>
-                          <h5>Select Country of Origin</h5>
-                          <select>
-                          <option>----</option>
-                          <option>Australia</option>
-                          <option>Belgium</option>
-                          <option>England</option>
-                          <option>France</option>
-                          <option>Ireland</option>
-                          <option>Portugal</option>
-                          <option>Scotland</option>
-                          <option>Spain</option>
-                          <option>USA</option>
-                          <option>Wales</option>
-                          </select>
-                          </ul>
-                      </div>
-                <form method="GET" action=
-            <!-- select by "ingredients" -->
-                    <div class="row">
-                        <ul id="navbar">
-                        <label for="Ingredients" class="field"></label>
-                        <h5>Select Ingredients:</h5>
-                        <select>
-                        <option>----</option>
-                        <option>Beef stew meat</option>
-                        <option>Chicken</option>
-                        <option>Curry powder</option>
-                        <option>Gammon</option>
-                        <option>Potatoes</option>
-                        <option>Steak</option>
-                        </select>
-                    </div>
-                <form method="GET" action=
-            <!-- select by "cuisine" -->
-                    <div class="row">
-                    <ul id="navbar">
-                    <label for="Cuisine" class="field"></label>
-                        <h5>Select Cuisine:</h5>
-                        <select>
-                        <option>----</option>
-                        <option>Scouse</option>
-                        <option>Shepherd's Pie</option>
-                        <option>Corned beef hash</option>
-                        <option>Roast lamb dinner</option>
-                        <option>Mixed grill</option>
-                        <option>Gammon and eggs</option>
-                        <option>Curry and rice</option>
-                        <option>Paella</option>
-                        <option>Lasagne</option>
-                        <option>Egg and chips</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <input type="submit">
-        </div>
-    </div>
-    </li>
-</ul>
+.container {
+    background-color: #007bff;
+}
 
-{% endblock %}
+.container2 {
+   width: 100%;
+   height: 90%;
+   margin: 0 auto -25px;
+   position: relative;
+   background-size: 100% 600px;
+   display: block;
+}
+
+.nav-navbar-nav {
+    background-color: blue;
+}
+
+.nav navbar-fixed-top navbar-default {
+	height: 20%;
+}
+
+.nav-navbar-nav {
+    background-color: blue;
+    min-height: 10%;
+}
+
+.ul {
+    padding: 0;
+    margin: 0 0 0 150px;
+    list-style: none;
+}
+
+.li {
+    float:right;
+}
+
+.logo {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.welcome-inner img {
+    width: 100%;
+}
+
+.welcome-title {
+    position: relative;
+    top: 115px;
+    padding: 10px;
+    color: black;
+}
+
+.p {
+    color: blue;
+    font-size: 12px;
+}
+
+.label {
+    color: white;
+}
+
+.ingredients-fields-container {
+    width: 400px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+.row {
+	height: 100%;
+	width: 100%;
+	text-align: left;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+.footer {
+	text-align: left;
+	height: 10px;
+}
+
+.label {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.label.field {
+    display: block;
+    text-align: center;
+    width: 100px;
+    float: left;
+}
+
+.option {
+    width: 100px;
+    border-radius: 2px;
+    background-color: red;
+}
+
+.viewrec {
+    display:inline-block;
+}
+
+.box_title {
+	width: 300px;
+	height: 400px;
+	text-align: center;
+	border-style: solid;
+	border-radius: 15%;
+	display: block;
+	font-size: medium;
+	border-color: black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form {
+    width: 4000px;
+    display: inline-block;
+}
+
+.input {
+    width: 100%;
+}
+
+.textarea {
+    resize: both;
+    max-height: 300px;
+}
+
+.input, .textarea {
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+.input:focus, .textarea:focus {
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+    border: 1px solid #ddd;
+}
+
+ .my-cool-wrapper {
+      position: relative;
+ }
+ .my-cool-wrapper .textimages-on-top {
+      padding: 10px 15px 19px 15px;
+      z-index: 1;
+      position: relative; /* needed to enable the z-index */
+ }
+ .my-cool-wrapper .transparent-background {
+      position: absolute;
+      top: 0;    
+      width: 100%;
+      height: 100%;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";       /* IE 8 */
+      filter: alpha(opacity=10);  /* IE 5-7 */
+      -moz-opacity: 0.1;          /* Netscape */
+      -khtml-opacity: 0.1;        /* Safari 1.x */
+      opacity: 0.1;               /* Good browsers */
+      background-color: blue;
+ }
