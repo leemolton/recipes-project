@@ -1,4 +1,3 @@
-BzrTools==2.6.0
 Click==7.0
 Flask==1.0.2
 Flask-PyMongo==2.2.0
@@ -7,8 +6,6 @@ MarkupSafe==1.1.1
 SecretStorage==2.0.0
 Werkzeug==0.15.2
 argparse==1.2.1
-bzr==2.7.0.dev1
-chardet==2.0.1
 colorama==0.2.5
 configobj==4.7.2
 duplicity==0.6.23
