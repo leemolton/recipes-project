@@ -18,6 +18,11 @@ body {
    display: block;
 }
 
+.row {
+    width: 50%;
+}
+
+
 .nav-navbar-nav {
     background-color: blue;
 }
@@ -43,8 +48,10 @@ body {
 
 .logo {
     position: absolute;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 10px;
+    height: 10%;
+    width: 10%;
 }
 
 .welcome-inner img {
