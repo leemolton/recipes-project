@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('get_recipes') }}">Home</a></li>
+              <a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('add_recipe') }}">Add a recipe</a></li>
             <li class="nav-item">
@@ -23,13 +23,8 @@
         </div>
       </div>
     </nav>
-        <div class="my-cool-wrapper">
-          <div class="textimages-on-top">
-            <p>Do you like cooking! Come and have a look at our recipes!</p>
-              <img src="/static/img/fishandchips.jpg">
-              <div class="transparent-background">
-              </div>
-          </div> 
+        <div class="logo">
+            <img id="landing-image" src="/static/img/fishandchips.jpg" alt="logo" width="200">
         </div>
 
     <!-- Main Content -->
