@@ -6,7 +6,7 @@
     <div class="list-display">
         <div class="container">
             <div class="navbar-header">
-                <form method="GET" action=
+                <form method="GET" 
             <!-- select by "Country of Origin" -->
                     <div class="container">
                       <div class="row">
@@ -27,7 +27,6 @@
                           <option>Wales</option>
                           </select>
                           </ul>
-                <form method="GET" action=
             <!-- select by "ingredients" -->
                         <ul id="navbar">
                         <label for="Ingredients" class="field"></label>
@@ -42,7 +41,6 @@
                         <option>Steak</option>
                         </select>
                         </ul>
-                <form method="GET" action=
             <!-- select by "cuisine" -->
                     <ul id="navbar">
                     <label for="Cuisine" class="field"></label>
@@ -61,36 +59,15 @@
                         <option>Egg and chips</option>
                         </select>
                     <button type="submit" class="btn waves-effect waves-light">Submit</button>
-                    <form id="my-form" action="{{url_for('view_recipe',recipe_id)}}" method="POST">
+                    <form id="my-form" action="{{url_for('view_recipe',recipe_id)}}" method="GET">
                     </div>
                 </div>
             </div>
         </div>
+    </form>
     </div>
 </ul>
 
-    <div class="container">
-        <div class="row">
-            {% for recipe in recipes %}
-            <div class="col s12 m4 13">
-                <div class="recipe card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <p>{{ recipe.name }}</p>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">{{ recipe.name }}</span>
-                        <p><a href="{{ url_for('view_recipe', recipe_id=recipe_id) }}">View Recipe</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text">{{ recipe.name }}<i class="material-icons right">close</i></span>
-                        <p><i id="icon_left" class="material-icons left">poll</i>Country of Origin: {{ recipe.countryoforigin }}</p>
-                        <p><i id="icon_left" class="material-icons left">poll</i>Cuisine: {{ recipe.cuisine }}</p>
-                        <p><i id="icon_left" class="material-icons left">poll</i>Ingredients: {{ recipe.ingredients }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+    
 
 {% endblock %}
