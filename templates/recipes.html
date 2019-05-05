@@ -2,64 +2,66 @@
 {% block content %}
 
 <h2>View Recipe</h2>
-    <!--Displays number of recipes selected-->
-    <div class="list-display">
-        <div class="container">
-            <div class="navbar-header">
-                <form method="GET" 
+    <br>
+<!--Displays number of recipes selected-->
+<div class="ingredients-fields-container">
+    <div id="box1" class="box_title">
+	<br>
+	<br>
+        <div class="navbar-header">
+            <form method="GET" action="{{url_for('view_recipe', recipe_id=recipe_id)}}">
             <!-- select by "Country of Origin" -->
-                    <div class="container">
-                      <div class="row">
-                        <ul id="navbar">
-                        <label for="CountryOrigin" class="field"></label>
-                          <h5>Select Country of Origin</h5>
-                          <select>
-                          <option>----</option>
-                          <option>Australia</option>
-                          <option>Belgium</option>
-                          <option>England</option>
-                          <option>France</option>
-                          <option>Ireland</option>
-                          <option>Portugal</option>
-                          <option>Scotland</option>
-                          <option>Spain</option>
-                          <option>USA</option>
-                          <option>Wales</option>
-                          </select>
-                          </ul>
+            <div class="container">
+                <div class="row">
+                    <ul id="navbar">
+                    <label for="CountryOrigin" class="field"></label>
+                    <h5>Country of Origin</h5>
+                    <select>
+                    <option>----</option>
+                    <option>Australia</option>
+                    <option>Belgium</option>
+                    <option>England</option>
+                    <option>France</option>
+                    <option>Ireland</option>
+                    <option>Portugal</option>
+                    <option>Scotland</option>
+                    <option>Spain</option>
+                    <option>USA</option>
+                    <option>Wales</option>
+                    </select>
+                    </ul>
             <!-- select by "ingredients" -->
-                        <ul id="navbar">
-                        <label for="Ingredients" class="field"></label>
-                        <h5>Select Ingredients:</h5>
-                        <select>
-                        <option>----</option>
-                        <option>Beef stew meat</option>
-                        <option>Chicken</option>
-                        <option>Curry powder</option>
-                        <option>Gammon</option>
-                        <option>Potatoes</option>
-                        <option>Steak</option>
-                        </select>
-                        </ul>
+                    <ul id="navbar">
+                    <label for="Ingredients" class="field"></label>
+                    <h5>Ingredients:</h5>
+                    <select>
+                    <option>----</option>
+                    <option>Beef stew meat</option>
+                    <option>Chicken</option>
+                    <option>Curry powder</option>
+                    <option>Gammon</option>
+                    <option>Potatoes</option>
+                    <option>Steak</option>
+                    </select>
+                    </ul>
             <!-- select by "cuisine" -->
                     <ul id="navbar">
                     <label for="Cuisine" class="field"></label>
-                        <h5>Select Cuisine:</h5>
-                        <select>
-                        <option>----</option>
-                        <option>Scouse</option>
-                        <option>Shepherd's Pie</option>
-                        <option>Corned beef hash</option>
-                        <option>Roast lamb dinner</option>
-                        <option>Mixed grill</option>
-                        <option>Gammon and eggs</option>
-                        <option>Curry and rice</option>
-                        <option>Paella</option>
-                        <option>Lasagne</option>
-                        <option>Egg and chips</option>
-                        </select>
-                    <button type="submit" class="btn waves-effect waves-light">Submit</button>
-                    <form id="my-form" action="{{url_for('view_recipe',recipe_id)}}" method="GET">
+                    <h5>Cuisine:</h5>
+                    <select>
+                    <option>----</option>
+                    <option>Scouse</option>
+                    <option>Shepherd's Pie</option>
+                    <option>Corned beef hash</option>
+                    <option>Roast lamb dinner</option>
+                    <option>Mixed grill</option>
+                    <option>Gammon and eggs</option>
+                    <option>Curry and rice</option>
+                    <option>Paella</option>
+                    <option>Lasagne</option>
+                    <option>Egg and chips</option>
+                    </select>
+                    <button type="submit" id="sendMessageButton">Submit</button>
                     </div>
                 </div>
             </div>

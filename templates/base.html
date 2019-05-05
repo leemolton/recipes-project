@@ -10,7 +10,7 @@
        <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a href="{{url_for('get_recipes')}}" class="brand-logo">Cookbook</a>
+        <a href="#" class="brand-logo">Cookbook</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -23,17 +23,13 @@
         </div>
       </div>
     </nav>
-        <div class="logo">
-            <img id="landing-image" src="/static/img/fishandchips.jpg" alt="logo" width="200">
-        </div>
-
+  
     <!-- Main Content -->
     <div class="container">
       {% block content %}
       {% endblock %}
     </div>
 
-    <hr>
     <!-- Footer -->
     <footer>
       <div class="container">
