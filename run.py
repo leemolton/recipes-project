@@ -1,12 +1,15 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
+from pymongo import MongoClient
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.secret_key = 'some_secret'
-app.config['MONGO_DBNAME'] = 'myrecipe'
-app.config['MONGO_URI'] = 'mongodb://root:Everton9@ds145881.mlab.com:45881/myrecipedb?authSource=admin'
+app.config['MONGO_DBNAME'] = 'myrecipedb'
+app.config['MONGO_URI'] = 'mongodb://root:Everton9@ds145881.mlab.com:45881/myrecipedb'
+#client = MongoClient('mongodb://root:Everton9@localhost:27017/myrecipe')
+#db = client['myrecipe']
 
 mongo = PyMongo(app)
 
@@ -40,6 +43,7 @@ def insert_recipe():
 
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
+    recipe = mongo.db.recipes
     the_recipe = mongo.db.recipe.find_one({"_id":ObjectId(recipe_id)})
     return render_template('viewrecipe.html', recipe=the_recipe)
     
