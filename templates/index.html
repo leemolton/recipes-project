@@ -2,11 +2,101 @@
 <html lang="en">
     <title>Recipe Dashboard</title>
 {% extends 'base.html' %} {% block content %}
-<div class="container">
+<div class="row">
     <div class="image">
-        <img id="headline-image" src="/static/img/fishandchips.jpg" width="500">
+        <img id="headline-image" src="/static/img/mainfood.jpg" width="500">
         <div class="col-lg-8 col-lg-10 mx-auto">
-           <p>Come and have a look at our recipes!</p>
+           <h5>Come and have a look at our recipes!</h5>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/static/img/gammonandeggs.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title">Gammon and Eggs</span>
+                <h6>A classic Gammon and Eggs</h6>
+                    <div class="card-action">
+                        <href="/view_recipe/5cb33ae0fb6fc037f078cb1f" class="btn btn-info">View Recipe</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/static/img/roast_lamb.jpg">
+            </div>
+                <div class="card-content">
+                    <span class="card-title">Roast Lamb Dinner</span>
+                    <h6>A classic Roast Lamb Dinner</h6>
+                        <div class="card-action">
+                            <button type="submit" class="btn btn-info" href="/view_recipe/5cb33aacfb6fc037f078cb0f" id="sendMessageButton">View Recipe</button>
+                        </div>
+                </div>
+        </div>
+    </div>
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/static/img/mixedgrill.jpg">
+            </div>
+                <div class="card-content">
+                    <span class="card-title">Mixed Grill</span>
+                    <h6>A classic Mixed Grill</h6>
+                        <div class="card-action">
+                            <button type="submit" class="btn btn-info" href="/view_recipe/5cb33ac1fb6fc037f078cb16" id="sendMessageButton">View Recipe</button>
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/static/img/scouse.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title">Scouse</span>
+                <h6>A classic bowl of Scouse</h6>
+                    <div class="card-action">
+                        <href="/view_recipe/5b533b63fb6fc03968495131" class="btn btn-info">View Recipe</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/static/img/ShepherdsPie.jpg">
+            </div>
+                <div class="card-content">
+                    <span class="card-title">Shepherd's Pie</span>
+                    <h6>A classic Shepherd's Pie</h6>
+                        <div class="card-action">
+                            <button type="submit" class="btn btn-info" href="/view_recipe/5cb33a5afb6fc037f078cafe" id="sendMessageButton">View Recipe</button>
+                        </div>
+                </div>
+        </div>
+    </div>
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                <img src="/static/img/cornedbeefhash.jpg">
+            </div>
+                <div class="card-content">
+                    <span class="card-title">Corned Beef Hash</span>
+                    <h6>A classic Corned Beef Hash</h6>
+                        <div class="card-action">
+                            <button type="submit" class="btn btn-info" href="/view_recipe/5cb33a92fb6fc037f078cb07" id="sendMessageButton">View Recipe</button>
+                        </div>
+                </div>
         </div>
     </div>
 </div>

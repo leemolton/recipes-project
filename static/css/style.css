@@ -153,23 +153,38 @@ body {
     border: 1px solid #ddd;
 }
 
- .my-cool-wrapper {
-      position: relative;
- }
- .my-cool-wrapper .textimages-on-top {
-      padding: 10px 15px 19px 15px;
-      z-index: 1;
-      position: relative; /* needed to enable the z-index */
- }
- .my-cool-wrapper .transparent-background {
-      position: absolute;
-      top: 0;    
-      width: 100%;
-      height: 100%;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";       /* IE 8 */
-      filter: alpha(opacity=10);  /* IE 5-7 */
-      -moz-opacity: 0.1;          /* Netscape */
-      -khtml-opacity: 0.1;        /* Safari 1.x */
-      opacity: 0.1;               /* Good browsers */
-      background-color: blue;
- }
+
+.card {
+    width: 300px;
+    height: 300px;
+}
+
+.card-image {
+    width: 300px;
+    height: 200px;
+}
+
+.card img {
+    width: 300px;
+    height: 200px;
+}
+
+.card-title {
+    font-size: 20px;
+    font: Arial;
+    color: blue;
+}
+
+.card-content {
+    width: 300px;
+    height: 200px;
+}
+
+.btn {
+    font-family: serif;
+}
+
+.btn-info {
+    background-color: green;
+}
+
