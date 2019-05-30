@@ -47,6 +47,27 @@ def view_recipe(recipe_id):
     the_recipe = mongo.db.recipe.find_one({"_id":ObjectId(recipe_id)})
     return render_template('viewrecipe.html', recipe=the_recipe)
     
+    
+@app.route('/find_recipe', methods=['GET', 'POST'])
+def find_recipe():
+    if request.method=='POST':
+        
+        # get search term
+        search_term = request.form.get("search_term")
+        
+        # create the index
+        mongo.db.recipe.create_index( [("$**", 'text')] )
+        
+        # search with the search term that came through the search bar
+        cursor = mongo.db.recipe.find({ "$text": { "$search": search_term } })
+        recipes = [recipe for recipe in cursor]
+        
+        # send recipes to page
+        return render_template('search.html', recipes=recipes, query=search_term)
+        
+    return render_template('search.html')
+    
+    
         
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
