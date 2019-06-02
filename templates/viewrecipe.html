@@ -1,50 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3 class="header-color">{{ recipes.name.capitalize() }}</h3>
-<div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">poll</i>
-                <input id="disabled" type="text" class="validate" disabled value="{{ recipes.countryoforigin.capitalize() }}">
-                <label for="disabled">Country of Origin</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">assignment</i>
-                <input id="disabled" type="text" class="validate" disabled value="{{ recipes.cuisine.capitalize() }}">
-                <label for="disabled">Cuisine</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">subject</i>
-                <input id="disabled" type="text" class="materialize-textarea readonly-color" disabled value="{{ recipes.ingredients.capitalize() }}">
-                <label for="disabled">Ingredients</label>
-            </div>
-        </div>
-    </form>
-</div>
-
+<h3 class="header-color">{{ recipe.name }}</h3>
 <div class="container">
         <div class="row">
             {% for recipe in recipes %}
             <div class="col s12 m4 13">
                 <div class="recipe card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <p>{{ recipe.name }}</p>
+                    <div class="card-image">
+                        <img class="recipe-img" src="{{ recipe.image }}" alt="{{ recipe.cuisine }}">
                     </div>
                     <div class="card-content">
                         <span class="card-title">{{ recipe.name }}</span>
                         <p><a href="{{ url_for('view_recipe', recipe_id=recipe_id) }}">View Recipe</a></p>
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text">{{ recipe.name }}<i class="material-icons right">close</i></span>
-                        <p><i id="icon_left" class="material-icons left">poll</i>Country of Origin: {{ recipe.countryoforigin }}</p>
-                        <p><i id="icon_left" class="material-icons left">poll</i>Cuisine: {{ recipe.cuisine }}</p>
-                        <p><i id="icon_left" class="material-icons left">poll</i>Ingredients: {{ recipe.ingredients }}</p>
+                        <strong>Country of Origin:</strong> {{ recipe.countryoforigin }}</p>
+                        <strong>Cuisine:</strong> {{ recipe.cuisine }}</p>
+                        <strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
+                        <strong>Item:</strong> {{ recipe.item }}</p>
+                        <strong>Quantity:</strong> {{ recipe.quantity }}</p>
                     </div>
                 </div>
             </div>
