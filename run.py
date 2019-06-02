@@ -24,26 +24,25 @@ def index():
 
 @app.route('/get_recipes')
 def get_recipes():
-    recipe = mongo.db.recipe.find({"_id": ObjectId()})
-    return render_template("recipes.html")
+    return render_template("recipes.html", recipes=mongo.db.recipe.find())
     
     
 @app.route('/add_recipe')
 def add_recipe():
     categories=mongo.db.categories.find()
-    return render_template("add.html") 
+    return render_template("add.html")
     
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
      recipes = mongo.db.recipe
      recipes.insert_one(request.form.to_dict())
-     return redirect(url_for('get_recipes'))
+     flash('Thank you for your recipe!')
+     return redirect(url_for('add_recipe'))
     
 
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
-    recipe = mongo.db.recipes
     the_recipe = mongo.db.recipe.find_one({"_id":ObjectId(recipe_id)})
     return render_template('viewrecipe.html', recipe=the_recipe)
     
