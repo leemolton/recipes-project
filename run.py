@@ -2,6 +2,7 @@ import os
 import json
 from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
+from pymongo import MongoClient
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
@@ -43,7 +44,7 @@ def insert_recipe():
 
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
-    the_recipe = mongo.db.recipe.find_one({"_id": recipe_id})
+    the_recipe = mongo.db.recipe.find_one({'_id': ObjectId(recipe_id)})
     return render_template('viewrecipe.html', recipe=the_recipe)
     
     
