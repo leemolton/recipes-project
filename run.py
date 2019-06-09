@@ -9,8 +9,6 @@ app = Flask(__name__)
 app.secret_key = 'some_secret'
 app.config['MONGO_DBNAME'] = 'myrecipedb'
 app.config['MONGO_URI'] = 'mongodb://root:Everton9@ds145881.mlab.com:45881/myrecipedb'
-#client = MongoClient('mongodb://root:Everton9@localhost:27017/myrecipe')
-#db = client['myrecipe']
 
 mongo = PyMongo(app)
 
