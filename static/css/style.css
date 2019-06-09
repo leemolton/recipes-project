@@ -87,7 +87,7 @@ body {
 }
 
 .box_title {
-	width: 300px;
+	width: 400px;
 	height: 400px;
 	text-align: center;
 	border-style: solid;
@@ -115,19 +115,6 @@ body {
     border-radius: 5px;
 }
 
-.label.field {
-    display: block;
-    text-align: center;
-    width: 100px;
-    float: left;
-}
-
-.option {
-    width: 100px;
-    border-radius: 2px;
-    background-color: red;
-}
-
 .viewrec {
     display:inline-block;
 }
@@ -137,7 +124,6 @@ body {
 }
 
 .textarea {
-    resize: both;
     max-height: 300px;
 }
 
