@@ -27,6 +27,14 @@ This is a basic online recipe book, As a user, I would expect to enter a new rec
 As a user, I would expect to be able to see all the recipes.
 As a user, I would expect to be able to search on existing recipes.
 
+The primary purpose for this project was to display new recipes for users and also enable them to enter new recipes
+to the website. I made a list of meals that I enjoy as I wanted the recipes to be of basic meals rather than 
+complicated Chinese or Indian meals. I have created wireframes with my initial designs at https://github.com/leemolton/recipes-project/tree/master/wireframes.
+
+I wanted to show pictures of the meals with the recipe title to give the user a quick and interesting view of the recipe with a button 
+they can click on to view the recipe. 
+
+
 ## Existing Features
 
 ### Header and Footer
@@ -42,8 +50,6 @@ The page starts with a form for the user to input into. The user starts by input
 and country where they are from. They then add the name of the cuisine, the item(s),
 quantity and if there are any allergens. The send button will then send this recipe to the database.
 
-### Wireframes 
-See the wireframes at https://github.com/leemolton/recipes-project/tree/master/wireframes.
 
 ### Technologies, Libraries and Languages
 
