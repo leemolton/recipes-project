@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p>Do you want to add a recipe? Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
+<form action="{{url_for('insert_recipe')}}" method="POST" class="col s12">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+      <form>
+        <div class="ingredients-fields-container">
+		      <div id="box1" class="box_title">
+            <form method="POST" name="sentMessage" id="contactForm" action="/add">
+                <label>Name</label>
+                <input type="text" placeholder="Name" name="name" id="name" required data-validation-required-message="Please enter your name.">
+                </br>
+                <label>Cuisine</label>
+                <input type="cuisine" placeholder="Cuisine" name="cuisine" id="cuisine" required data-validation-required-message="Please enter your cuisine.">
+                </br>
+                <label>Cooking Time</label>
+                <input type="cooking_time" placeholder="cooking time" name="cooking_time" id="cooking_time" required data-validation-required-message="Please enter the cooking time.">
+                </br>
+                <label>Item</label>
+                <textarea name="item" placeholder="Please enter any items." required data-validation-required-message="Please enter any items." ></textarea>
+                </br>
+                <label>Quantity</label>
+                <textarea name="quantity" placeholder="Please enter the quantity(s)." required data-validation-required-message="Please enter the quantity(s)."></textarea>
+                </br>
+                <label>Allergen</label>
+                <textarea name="allergen" placeholder="Please enter any allergens."required data-validation-required-message="Please enter any allergens."></textarea>
+                </br>
+            <div id="success">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+{% endblock %}
+
+
