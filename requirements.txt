@@ -4,7 +4,7 @@ Flask-PyMongo==2.2.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 SecretStorage==2.0.0
-Werkzeug==0.15.2
+Werkzeug==0.15.3
 argparse==1.2.1
 colorama==0.2.5
 html5lib==0.999
