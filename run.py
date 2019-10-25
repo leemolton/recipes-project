@@ -19,52 +19,63 @@ username = os.getenv('C9_USER')
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
     
 
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipe.find())
+        return render_template("recipes.html", recipes=mongo.db.recipe.find())
+
+
     
     
 @app.route('/add_recipe')
 def add_recipe():
-    categories=mongo.db.categories.find()
-    return render_template("add.html")
+        categories=mongo.db.categories.find()
+        return render_template("add.html")
+
+
     
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
-     recipes = mongo.db.recipe
-     recipes.insert_one(request.form.to_dict())
-     flash('Thank you for your recipe!')
-     return redirect(url_for('add_recipe'))
+        recipes = mongo.db.recipe
+        recipes.insert_one(request.form.to_dict())
+        flash('Thank you for your recipe!')
+        return redirect(url_for('add_recipe'))
+
+
     
 
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
-    the_recipe = mongo.db.recipe.find_one({'_id': ObjectId(recipe_id)})
-    return render_template('viewrecipe.html', recipe=the_recipe)
+        the_recipe = mongo.db.recipe.find_one({'_id': ObjectId(recipe_id)})
+        return render_template('viewrecipe.html', recipe=the_recipe)
+
+
     
     
 @app.route('/find_recipe', methods=['GET', 'POST'])
 def find_recipe():
-    if request.method=='POST':
+        if request.method=='POST':
         
-        # get search term
-        search_term = request.form.get("search_term")
+            # get search term
+            search_term = request.form.get("search_term")
         
-        # create the index
-        mongo.db.recipe.create_index( [("$**", 'text')] )
+            # create the index
+            mongo.db.recipe.create_index( [("$**", 'text')] )
         
-        # search with the search term that came through the search bar
-        cursor = mongo.db.recipe.find({ "$text": { "$search": search_term } })
-        recipes = [recipe for recipe in cursor]
-        print(search_term)
+            # search with the search term that came through the search bar
+            cursor = mongo.db.recipe.find({ "$text": { "$search": search_term } })
+            recipes = [recipe for recipe in cursor]
+            print(search_term)
         
-        # send recipes to page
-        return render_template('search.html', recipes=recipes, query=search_term)
+            # send recipes to page
+            return render_template('search.html', recipes=recipes, query=search_term)
         
-    return render_template('search.html')
+        return render_template('search.html')
+        
     
     
         
