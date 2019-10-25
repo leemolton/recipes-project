@@ -80,7 +80,7 @@ I tested add recipe form and added a recipe to the database successfully.
 
 #### Running the server
 The application was coded on Cloud9 and was then committed to GITHUB 
-at https://github.com/leemolton/footy_fanspage. The application was 
+at https://github.com/leemolton/recipes-project. The application was 
 deployed from GITHUB to Heroku at https://my-cooking-recipe.herokuapp.com.
     
 My database is stored on MongoDB and is setup within Heroku.
