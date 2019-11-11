@@ -23,9 +23,8 @@ from a Roast Lamb Dinner to Gammon and Eggs. There is a database of recipes that
 ## UX
 
 ### Strategy
-This is a basic online recipe book, As a user, I would expect to enter a new recipe.
-As a user, I would expect to be able to see all the recipes.
-As a user, I would expect to be able to search on existing recipes.
+This is a basic online recipe book, I wanted it to be informative for the users and also easy to enter a new recipe.
+I started by creating a front page with several photos of basic meals, I decided to use traditional meals that are easy to cook. By having a photo of the meal and a link to the recipe, it makes it more interesting and looks more appealing to the user. For the user to be able to see all the recipes, I decided to add a search bar at the top where the user can search existing recipes by using key words. I also wanted the user to be able to enter new recipes and decided to create a simple form for a new recipe to be added.
 
 ## Existing Features
 
@@ -43,7 +42,7 @@ and country where they are from. They then add the name of the cuisine, the item
 quantity and if there are any allergens. The send button will then send this recipe to the database.
 
 ### Wireframes 
-See the wireframes at https://github.com/leemolton/recipes-project/tree/master/wireframes.
+I have created wireframes of my original ideas, to see these wireframes go to https://github.com/leemolton/recipes-project/tree/master/wireframes.
 
 ### Technologies, Libraries and Languages
 
@@ -63,17 +62,14 @@ Throughout this project I have used:
 ### Manual Testing
 
 Navigation
-The pages have been tested and all the links to the pages to ensure that they work 
-properly and take the user to the right place. The navigation bar is at the
-top of every page. All of the navigation has been tested on smaller screen 
+Manual testing for the application was undertaken and it passed. I put a plan together to test everything from the menu bar to the different links on each page. My first test was to test the buttons on the menu bar to access the different pages. The pages opened and on the correct page, the links were correctly written to the different template files. The hyperlinks were next to be tested, firstly on the home page to the different recipes and all the links to the recipes to ensure that they worked. The right recipes opened correctly. All of the navigation has been tested on smaller screen 
 devices too.
     
 Search Recipe bar
-I tested the input of the search bar and displayed a few different recipes. 
-I clicked on the View Recipe button to display the specific recipe.
+I firstly tested the input of the search bar and displayed a few different recipes. Next I clicked on the View Recipe button to display a range of specific recipes, the recipes selected all displayed correctly.
     
 Add recipe form
-I tested add recipe form and added a recipe to the database successfully.
+The next test was on the recipe form, to test this I added a new recipe by completing each box of the form and then clicked on the submit button. The new recipe was added to the database successfully.
     
 
 ## Heroku Deployment
