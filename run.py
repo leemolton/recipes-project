@@ -1,6 +1,6 @@
 import os
 import json
-import pymysql
+import PyMySQL
 from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
