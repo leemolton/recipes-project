@@ -44,7 +44,7 @@ def insert_recipe():
         recipes = mongo.db.recipe
         recipes.insert_one(request.form.to_dict())
         flash('Thank you for your recipe!')
-        return redirect(url_for('templates/add_recipe'))
+        return redirect(url_for('add_recipe'))
 
 
     
