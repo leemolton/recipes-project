@@ -52,7 +52,7 @@ def insert_recipe():
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
         the_recipe = mongo.db.recipe.find_one({'_id': ObjectId(recipe_id)})
-        return render_template('viewrecipe.html', recipe=the_recipe)
+        return render_template('templates/viewrecipe.html', recipe=the_recipe)
 
 
     
