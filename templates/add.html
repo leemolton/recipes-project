@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{page_title }}</h2>
+
+<p>Do you want to add a recipe?</p>
+
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class="flashes">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+        <p>Want to get in touch? Fill out the form below with your recipe details and we will add it to the website!</p>
+          
+        <form method="POST" name="sentMessage" id="contactForm">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Name</label>
+                <input type="text" class="form-control" placeholder="Name" name="name" id="name" required data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Country</label>
+                <input type="country" class="form-control" placeholder="Country" name="country" id="country" required data-validation-required-message="Please enter your country of origin.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Cuisine</label>
+                <input type="tel" class="form-control" placeholder="Cuisine" name ="cuisine" id="cuisine" required data-validation-required-message="Please enter your cuisine.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Allergen</label>
+                <textarea rows="5" class="form-control" placeholder="Allergen" name="allergen" id="allergen" required data-validation-required-message="Please enter any allergens."></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+{% endblock %}
