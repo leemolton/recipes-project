@@ -73,9 +73,9 @@ def find_recipe():
             print(search_term)
         
             # send recipes to page
-            return render_template('templates/search.html', recipes=recipes, query=search_term)
+            return render_template('search.html', recipes=recipes, query=search_term)
         
-        return render_template('templates/search.html')
+        return render_template('search.html')
         
     
     
