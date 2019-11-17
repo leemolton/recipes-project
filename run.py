@@ -18,9 +18,9 @@ mongo = PyMongo(app)
 username = os.getenv('C9_USER')
 
 
-@app.route('/')
-def index():
-    return render_template("index.html")
+#@app.route('/')
+#def index():
+ #   return render_template("index.html")
 
 
 
