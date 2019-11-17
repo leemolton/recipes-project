@@ -1,6 +1,5 @@
 import os
 import json
-<<<<<<< HEAD
 import pymysql
 from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
@@ -23,13 +22,11 @@ from flask import Flask, render_template, request, flash
 app = Flask(__name__)
 app.secret_key = 'some_secret'
 
->>>>>>> 016e4a7c1423d84ce28c9141a97d9d786004f1df
 
 @app.route('/')
 def index():
     return render_template("index.html")
 
-<<<<<<< HEAD
 
     
 
@@ -113,4 +110,4 @@ if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
             debug=True)
->>>>>>> 016e4a7c1423d84ce28c9141a97d9d786004f1df
+
