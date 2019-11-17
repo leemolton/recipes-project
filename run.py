@@ -44,7 +44,7 @@ def insert_recipe():
         recipes = mongo.db.recipe
         recipes.insert_one(request.form.to_dict())
         flash('Thank you for your recipe!')
-        return redirect(url_for('add_recipe'))
+        return redirect(url_for('templates/add_recipe'))
 
 
     
@@ -52,7 +52,7 @@ def insert_recipe():
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
         the_recipe = mongo.db.recipe.find_one({'_id': ObjectId(recipe_id)})
-        return render_template('templates/viewrecipe.html', recipe=the_recipe)
+        return render_template('viewrecipe.html', recipe=the_recipe)
 
 
     
@@ -73,9 +73,9 @@ def find_recipe():
             print(search_term)
         
             # send recipes to page
-            return render_template('search.html', recipes=recipes, query=search_term)
+            return render_template('templates/search.html', recipes=recipes, query=search_term)
         
-        return render_template('search.html')
+        return render_template('templates/search.html')
         
     
     
