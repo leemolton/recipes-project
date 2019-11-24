@@ -55,8 +55,6 @@ def view_recipe(recipe_id):
         return render_template('viewrecipe.html', recipe=the_recipe)
 
 
-    
-    
 @app.route('/find_recipe', methods=['GET', 'POST'])
 def find_recipe():
         if request.method=='POST':
@@ -76,8 +74,8 @@ def find_recipe():
             return render_template('search.html', recipes=recipes, query=search_term)
         
         return render_template('search.html')
-        
-    
+      
+           
     
         
 if __name__ == '__main__':
