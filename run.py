@@ -33,7 +33,7 @@ def get_recipes():
     
 @app.route('/add_recipe')
 def add_recipe():
-        recipes=mongo.db.recipes.find()
+        recipe=mongo.db.recipe.find()
         return render_template("add.html")
 
 
@@ -41,9 +41,8 @@ def add_recipe():
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
-        recipes = mongo.db.recipe
-        insert_recipe = request.form.to_dict()
-            #recipes.insert_one(request.form.to_dict())
+        recipe = mongo.db.recipe
+        insert_recipe = insertOne().request.form.to_dict()
         flash('Thank you for your recipe!')
         return redirect(url_for('add_recipe'))
 
@@ -68,11 +67,11 @@ def find_recipe():
         
             # search with the search term that came through the search bar
             cursor = mongo.db.recipe.find({ "$text": { "$search": search_term } })
-            recipes = [recipe for recipe in cursor]
+            recipe = [recipe for recipe in cursor]
             print(search_term)
         
             # send recipes to page
-            return render_template('search.html', recipes=recipes, query=search_term)
+            return render_template('search.html', recipe=recipe, query=search_term)
         
         return render_template('search.html')
       
