@@ -9,7 +9,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 app.secret_key = 'some_secret'
 app.config['MONGO_DBNAME'] = 'myrecipedb'
-app.config['MONGO_URI'] = 'mongodb://root:Everton9@ds145881.mlab.com:45881/myrecipedb', retryWrites=False
+app.config['MONGO_URI'] = 'mongodb://root:Everton9@ds145881.mlab.com:45881/myrecipedb'?retryWrites=False
 
 
 mongo = PyMongo(app)
