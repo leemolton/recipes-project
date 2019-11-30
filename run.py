@@ -34,8 +34,7 @@ def get_recipes():
     
 @app.route('/add_recipe')
 def add_recipe():
-        recipe = mongo.db.recipe.find()
-        return render_template("add.html", recipe=recipe)
+        return render_template("add.html", recipe = mongo.db.recipe.find())
 
 
     
