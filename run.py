@@ -11,6 +11,7 @@ app.secret_key = 'some_secret'
 app.config['MONGO_DBNAME'] = 'myrecipedb'
 app.config['MONGO_URI'] = 'mongodb://root:Everton9@ds145881.mlab.com:45881/myrecipedb'
 
+
 mongo = PyMongo(app)
 
 # Get username from Cloud9 workspace
@@ -42,7 +43,7 @@ def add_recipe():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
         recipe = mongo.db.recipe 
-        recipe.insert_one(request.form.to_dict(flat=False))
+        recipe.insert_one(request.form.to_dict())
         flash('Thank you for your recipe!')
         return redirect(url_for('add_recipe'))
 
