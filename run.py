@@ -56,13 +56,12 @@ def view_recipe(recipe_id):
 
 
 
-
 @app.route('/find_recipe', methods=['GET', 'POST'])
 def find_recipe():
         if request.method=='POST':
         
             # get search term
-            search_term = request.form.get_dict("search_term")
+            search_term = request.form.get("search_term")
         
             # create the index
             mongo.db.recipe.create_index( [("$**", 'text')] )
