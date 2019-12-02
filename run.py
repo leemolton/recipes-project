@@ -56,7 +56,7 @@ def view_recipe(recipe_id):
 
 
 
-@app.route('/find_recipe', methods=['GET', 'POST'])
+@app.route('/find_recipe', methods=['POST'])
 def find_recipe():
         if request.method=='POST':
         
