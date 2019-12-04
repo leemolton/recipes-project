@@ -63,7 +63,7 @@ def view_recipe(recipe_id):
 
 @app.route('/find_recipe', methods=['GET', 'POST'])
 def find_recipe():
-        if request.method=='GET':
+        if request.method=='POST':
         
             # get search term
             search_term = request.form("search_term")
