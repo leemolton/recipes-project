@@ -41,6 +41,9 @@ The page starts with a form for the user to input into. The user starts by input
 and country where they are from. They then add the name of the cuisine, the item(s),
 quantity and if there are any allergens. The send button will then send this recipe to the database.
 
+### Delete a Recipe
+A recipe can be deleted by the user, by searching in the search bar for the recipe. This will bring up the option of view receipe or delete recipe, the delete recipe button will delete the recipe from the database.
+
 ### Wireframes 
 I have created wireframes of my original ideas, to see these wireframes go to https://github.com/leemolton/recipes-project/tree/master/wireframes.
 
