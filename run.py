@@ -80,12 +80,12 @@ def find_recipe():
 
 
 
- @app.route('/delete_recipe/<recipe_id>')
- def delete_recipe(recipe_id):
-        recipe = mongodb.recipe
-        mongo.db.recipe.remove()
-        flash('You have successfully removed the recipe!')
-        return render_template('search.html')     
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+            recipe = mongodb.recipe
+            mongo.db.recipe.remove({'_id': ObjectId(recipe_id)})
+            flash('You have successfully removed the recipe!')
+            return render_template('search.html')     
            
     
         
