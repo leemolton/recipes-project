@@ -85,7 +85,7 @@ def delete_recipe(recipe_id):
         recipe = mongo.db.recipe
         mongo.db.recipe.remove({'_id': ObjectId(recipe_id)})
         flash('You have successfully removed the recipe!')
-        return redirect(url_for('insert_recipe'))     
+        return redirect(url_for('view_recipe'))     
            
     
         
