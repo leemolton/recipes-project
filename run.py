@@ -82,7 +82,7 @@ def find_recipe():
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
-            recipe = mongodb.recipe
+            recipe = mongo.db.recipe
             mongo.db.recipe.remove({'_id': ObjectId(recipe_id)})
             flash('You have successfully removed the recipe!')
             return render_template('search.html')     
