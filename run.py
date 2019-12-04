@@ -55,10 +55,6 @@ def view_recipe(recipe_id):
         return render_template('viewrecipe.html', recipe=the_recipe)
 
 
-#@app.route('/find_recipe')
-#def find_recipe():
-#    recipe = mongo.db.recipes.find()
-#    return render_template('search.html')
 
 
 @app.route('/find_recipe', methods=['GET', 'POST'])
@@ -84,10 +80,12 @@ def find_recipe():
 
 
 
- #@app.route('/delete_recipe/<recipe_id>')
- #def delete_recipe(recipe_id):
- #           recipe = mongodb.recipe
- #           recipe.delete_one     
+ @app.route('/delete_recipe/<recipe_id>')
+ def delete_recipe(recipe_id):
+            recipe = mongodb.recipe
+            mongo.db.recipe.remove()
+            flash('You have successfully removed the recipe!')
+            return render_template('search.html')     
            
     
         
