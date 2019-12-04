@@ -56,7 +56,7 @@ def view_recipe(recipe_id):
 
 
 
-@app.route('/find_recipe', methods=['POST'])
+@app.route('/find_recipe', methods=['GET'])
 def find_recipe():
         if request.method=='POST':
         
@@ -76,6 +76,13 @@ def find_recipe():
         
         return render_template('search.html')
       
+
+
+
+ #@app.route('/delete_recipe/<recipe_id>')
+ #def delete_recipe(recipe_id):
+ #           recipe = mongodb.recipe
+ #           recipe.delete_one     
            
     
         
