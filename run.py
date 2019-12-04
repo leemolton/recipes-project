@@ -25,6 +25,7 @@ def index():
 
 
 
+
 @app.route('/get_recipes')
 def get_recipes():
         return render_template("recipes.html", recipe=mongo.db.recipe.find())
@@ -85,7 +86,7 @@ def delete_recipe(recipe_id):
         recipe = mongo.db.recipe
         mongo.db.recipe.remove({'_id': ObjectId(recipe_id)})
         flash('You have successfully removed the recipe!')
-        return redirect(url_for('view_recipe'))     
+        return redirect(url_for('get_recipes'))     
            
     
         
