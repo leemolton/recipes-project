@@ -55,26 +55,31 @@ def view_recipe(recipe_id):
         return render_template('viewrecipe.html', recipe=the_recipe)
 
 
-
-@app.route('/find_recipe', methods=['GET', 'POST'])
+@app.route('/find_recipe')
 def find_recipe():
-        if request.method=='GET':
-        
-            # get search term
-            search_term = request.form.get("search_term")
-        
-            # create the index
-            mongo.db.recipe.create_index( [("$**", 'text')] )
-        
-            # search with the search term that came through the search bar
-            cursor = mongo.db.recipe.find({ "$text": { "$search": search_term } })
-            recipe = [recipe for recipe in cursor]
-            print(search_term)
-        
-            # send recipes to page
-            return render_template('search.html', recipe=recipe, query=search_term)
-        
-        return render_template('search.html')
+    recipe = mongo.db.recipes.find()
+    return render_template('search.html')
+
+
+#@app.route('/find_recipe', methods=['GET', 'POST'])
+#def find_recipe():
+#        if request.method=='GET':
+#        
+#            # get search term
+#            search_term = request.form.get("search_term")
+#        
+#            # create the index
+#            mongo.db.recipe.create_index( [("$**", 'text')] )
+#        
+#            # search with the search term that came through the search bar
+#            cursor = mongo.db.recipe.find({ "$text": { "$search": search_term } })
+#            recipe = [recipe for recipe in cursor]
+#            print(search_term)
+#        
+ #           # send recipes to page
+ #           return render_template('search.html', recipe=recipe, query=search_term)
+#        
+#        return render_template('search.html')
       
 
 
