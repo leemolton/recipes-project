@@ -66,7 +66,7 @@ def find_recipe():
         if request.method=='POST':
         
             # get search term
-            search_term = request.form("search_term")
+            search_term = request.form.get("search_term")
         
             # create the index
             mongo.db.recipe.create_index( [("$**", 'text')] )
